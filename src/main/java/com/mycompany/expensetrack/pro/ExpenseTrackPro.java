@@ -11,6 +11,6 @@ package com.mycompany.expensetrack.pro;
 public class ExpenseTrackPro {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        System.out.println("HI World!");
     }
 }
