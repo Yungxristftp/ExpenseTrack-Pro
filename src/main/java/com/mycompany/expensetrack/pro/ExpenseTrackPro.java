@@ -6,11 +6,12 @@ package com.mycompany.expensetrack.pro;
 
 /**
  *
- * @author User
+ * @author Rashid Williams
  */
 public class ExpenseTrackPro {
 
     public static void main(String[] args) {
-        System.out.println("HI World!");
+        
+        
     }
 }
