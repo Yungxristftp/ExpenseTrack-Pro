@@ -7,16 +7,18 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 
 /**
  *
  * @author Rashid Williams
  */
 public class ExpenseTrackPro {
+    
+    private static final Logger logger = LogManager.getLogger(ExpenseTrackPro.class);
    
-
     public static void main(String[] args) throws SQLException {
         
         
@@ -37,19 +39,20 @@ try {
                     {
                       String UserID=rs.getString("UserID");
                       System.out.format("%s",UserID);
+                      logger.info("Print Out Successful");
                     }
                  st.closeOnCompletion();
                  con.close();
 
             } catch (SQLException ex) {
 
-                Logger.getLogger(ExpenseTrackPro.class.getName()).log(Level.SEVERE, null, ex);
+                logger.warn("Sql Failed");
 
             }
 
         } catch (ClassNotFoundException ex) {
 
-            Logger.getLogger(ExpenseTrackPro.class.getName()).log(Level.SEVERE, null, ex);
+            logger.warn("Sql Failed");
 
         }
      
